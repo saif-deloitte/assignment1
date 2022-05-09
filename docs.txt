@@ -1,0 +1,57 @@
+CREATE TABLE SALESMAN (
+    sno int,
+    s_name char(30),
+    start_year int,
+    deptno varchar(10)
+);
+
+
+CREATE TABLE TRIP (
+    tno int,
+    from_city char(20),
+    to_city char(20),
+	DEPARTURE_DATE DATE,
+    RETURN DATE
+);
+
+
+CREATE TABLE dept (
+    DEPTNO VARCHAR(10),
+    DEPT_NAME CHAR(20)
+);
+
+
+CREATE TABLE EXPENSES (
+    EID INT,
+    AMOUNT int
+);
+
+
+INSERT INTO salesman 
+VALUES (1,'sam',2002, 'a1'),(2,'tom',2014, 'a2'),(3,'joe',2017, 'a3')
+
+
+INSERT INTO trip 
+VALUES (135,'kanpur','new york','2021-11-06', '2015-11-09'),
+(225,'london','paris','2021-11-09', '2015-11-015'),
+(398,'sydney','kolkata','2021-11-01', '2021-11-25')
+
+insert into dept
+values (163, 'airline'), (647, 'shipyard'), (259, 'transportaion')
+
+insert into expenses
+values (36136, '50000'), (1361, '4000'), (9456, '70000')
+
+SELECT amount
+From expenses
+Where amount > 10000
+
+
+SELECT tno FROM trip
+WHERE to_city='kolkata';
+
+
+DELETE FROM expenses WHERE amount>15000;
+
+select * from expenses
+
